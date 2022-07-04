@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Clock</title>
+    <style>
+        body{
+            background: linear-gradient(to right,rgb(14, 201, 191),rgb(183, 250, 212));
+            width: 100vw;
+            height: 100vh;
+        }
+        .cont{
+            border-radius: 5%;
+            position: fixed;
+            top:12.5%;
+            left: 12.5%;
+            display:grid;
+            grid-template-rows: 1fr 1fr 1fr;
+            background: linear-gradient(to right , rgb(183, 250, 212) , rgb(14, 201, 191));
+            width:75%;
+            height:75%;
+        }
+        .clock{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-column-gap: 0.4em;
+            background-color: rgba(255, 525, 255,0.8);
+        }
+        .clock h1{         
+            font-size: 1em;
+            color: rgba(15, 128, 0, 0.815);
+            text-shadow: 2px 2px 3px rgb(37, 138, 133);
+        }
+        h1{
+            text-shadow: 2px 2px 3px rgb(37, 138, 133);
+            color: cornsilk;
+            text-align: center;
+            font-size: 50px;
+            font-family: Cambria, Cochin, Georgia, Times,'Times New Roman', serif;
+        }
+        @media  screen and (max-width :200px ) {
+            .clock h1{
+                font-size: .7em;
+            }
+        }
+        @media  screen and (min-width :700px ) {
+            .clock h1{
+                font-size: 2.5em;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="cont">
+        <h1>Clock</h1>
+        <div class="clock">
+            <div id="hr">
+            </div>
+            <div id="min">
+               
+            </div>
+            <div id="sec">
+               
+            </div>
+            <div>
+                <h1>Hour</h1>
+            </div>
+            <div >
+                <h1>Minutes</h1>
+            </div>
+            <div >
+                <h1>Seconds</h1>
+            </div>
+        </div>
+    </div>
+    <script src="clock.js"></script>
+</body>
+</html>
